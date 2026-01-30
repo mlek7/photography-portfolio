@@ -110,3 +110,101 @@ footer {
 .text-gray-500 {
     color: #cccccc !important;
 }
+
+/* Peter McKinnon Layout Enhancements */
+
+/* Center the logo/name */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem !important;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000000 !important;
+}
+
+/* Navigation styling to match PM */
+nav a {
+    margin-left: 2rem !important;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.1em !important;
+}
+
+/* Hide About Me section for minimal look */
+.about-section,
+#about {
+    display: none !important;
+}
+
+/* Portfolio grid - masonry-style with no gaps */
+.gallery {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-top: 100px !important;
+}
+
+/* Gallery items - full bleed */
+.gallery-item,
+.portfolio-item {
+    position: relative !important;
+    overflow: hidden !important;
+    aspect-ratio: 1 / 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* Make some images span 2 columns for variety */
+.gallery-item:nth-child(4n+1) {
+    grid-column: span 2 !important;
+    grid-row: span 2 !important;
+}
+
+/* Images fill container */
+.gallery-item img,
+.portfolio-item img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* Hover effect */
+.gallery-item:hover img,
+.portfolio-item:hover img {
+    transform: scale(1.05) !important;
+}
+
+/* Minimal footer */
+footer {
+    text-align: center !important;
+    padding: 3rem 0 !important;
+}
+
+footer .social-links {
+    justify-content: center !important;
+    gap: 2rem !important;
+}
+
+/* Hide contact form for minimal design */
+.contact-section form {
+    display: none !important;
+}
+
+/* Portfolio title styling */
+.portfolio h2,
+.gallery h2 {
+    display: none !important;
+}
+
+/* Remove section titles except main hero */
+section h2:not(.hero h2) {
+    display: none !important;
+}
