@@ -1,0 +1,112 @@
+/* Peter McKinnon Inspired Dark Theme */
+
+/* Global overrides for dark theme */
+body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* Header and navigation */
+header, nav {
+    background-color: #000000 !important;
+    border-bottom: 1px solid #333333;
+}
+
+/* Typography - Bold and dramatic */
+h1, .portfolio-title {
+    font-weight: 900 !important;
+    font-size: 4rem !important;
+    letter-spacing: -0.05em !important;
+    text-transform: uppercase !important;
+    color: #ffffff !important;
+}
+
+h2 {
+    font-weight: 800 !important;
+    font-size: 2.5rem !important;
+    letter-spacing: -0.02em !important;
+    color: #ffffff !important;
+}
+
+/* Portfolio grid styling */
+.portfolio-grid, .gallery {
+    background-color: #000000 !important;
+}
+
+/* Image containers */
+.portfolio-item, .gallery-item {
+    background-color: #0a0a0a !important;
+    border: 1px solid #1a1a1a !important;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.portfolio-item:hover, .gallery-item:hover {
+    transform: scale(1.02);
+    border-color: #ffffff !important;
+}
+
+/* Text and links */
+a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #cccccc !important;
+}
+
+/* Buttons */
+button, .btn {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    padding: 1rem 2.5rem !important;
+    border: none !important;
+    letter-spacing: 0.1em !important;
+}
+
+button:hover, .btn:hover {
+    background-color: #cccccc !important;
+}
+
+/* Section spacing - dramatic and bold */
+section {
+    padding: 5rem 0 !important;
+    background-color: #000000 !important;
+}
+
+/* Footer */
+footer {
+    background-color: #000000 !important;
+    border-top: 1px solid #333333 !important;
+    color: #ffffff !important;
+}
+
+/* About section */
+.about-section {
+    background-color: #0a0a0a !important;
+}
+
+/* Contact section */
+.contact-section input,
+.contact-section textarea {
+    background-color: #1a1a1a !important;
+    border: 1px solid #333333 !important;
+    color: #ffffff !important;
+}
+
+/* Remove any light backgrounds */
+.bg-white, .bg-gray-100, .bg-gray-200 {
+    background-color: #000000 !important;
+}
+
+/* Text colors */
+.text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900 {
+    color: #ffffff !important;
+}
+
+.text-gray-500 {
+    color: #cccccc !important;
+}
