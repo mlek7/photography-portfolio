@@ -1,210 +1,222 @@
-/* Peter McKinnon Inspired Dark Theme */
+/* PETER MCKINNON EXACT REPLICA */
 
-/* Global overrides for dark theme */
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-}
-
-/* Header and navigation */
-header, nav {
-    background-color: #000000 !important;
-    border-bottom: 1px solid #333333;
-}
-
-/* Typography - Bold and dramatic */
-h1, .portfolio-title {
-    font-weight: 900 !important;
-    font-size: 4rem !important;
-    letter-spacing: -0.05em !important;
-    text-transform: uppercase !important;
-    color: #ffffff !important;
-}
-
-h2 {
-    font-weight: 800 !important;
-    font-size: 2.5rem !important;
-    letter-spacing: -0.02em !important;
-    color: #ffffff !important;
-}
-
-/* Portfolio grid styling */
-.portfolio-grid, .gallery {
-    background-color: #000000 !important;
-}
-
-/* Image containers */
-.portfolio-item, .gallery-item {
-    background-color: #0a0a0a !important;
-    border: 1px solid #1a1a1a !important;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.portfolio-item:hover, .gallery-item:hover {
-    transform: scale(1.02);
-    border-color: #ffffff !important;
-}
-
-/* Text and links */
-a {
-    color: #ffffff !important;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-a:hover {
-    color: #cccccc !important;
-}
-
-/* Buttons */
-button, .btn {
-    background-color: #ffffff !important;
+    background-color: #f5f5f5 !important;
     color: #000000 !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    padding: 1rem 2.5rem !important;
-    border: none !important;
-    letter-spacing: 0.1em !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    overflow-x: hidden;
 }
 
-button:hover, .btn:hover {
-    background-color: #cccccc !important;
-}
-
-/* Section spacing - dramatic and bold */
-section {
-    padding: 5rem 0 !important;
-    background-color: #000000 !important;
-}
-
-/* Footer */
-footer {
-    background-color: #000000 !important;
-    border-top: 1px solid #333333 !important;
-    color: #ffffff !important;
-}
-
-/* About section */
-.about-section {
-    background-color: #0a0a0a !important;
-}
-
-/* Contact section */
-.contact-section input,
-.contact-section textarea {
-    background-color: #1a1a1a !important;
-    border: 1px solid #333333 !important;
-    color: #ffffff !important;
-}
-
-/* Remove any light backgrounds */
-.bg-white, .bg-gray-100, .bg-gray-200 {
-    background-color: #000000 !important;
-}
-
-/* Text colors */
-.text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900 {
-    color: #ffffff !important;
-}
-
-.text-gray-500 {
-    color: #cccccc !important;
-}
-
-/* Peter McKinnon Layout Enhancements */
-
-/* Center the logo/name */
+/* Header - Exact PM Style */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 3rem !important;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #000000 !important;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    padding: 1.5rem 3rem !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 1000 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
-/* Navigation styling to match PM */
+/* Logo - Centered Typewriter Style */
+header h1,
+header .logo,
+header a[href="/"] {
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.3em !important;
+    text-align: center !important;
+    color: #000000 !important;
+    text-transform: uppercase !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Navigation - Right Aligned */
+nav {
+    display: flex !important;
+    gap: 2rem !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
 nav a {
-    margin-left: 2rem !important;
-    font-size: 0.9rem !important;
+    color: #000000 !important;
+    text-decoration: none !important;
+    font-size: 0.75rem !important;
     font-weight: 600 !important;
-    letter-spacing: 0.1em !important;
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: opacity 0.2s !important;
 }
 
-/* Hide About Me section for minimal look */
-.about-section,
-#about {
+nav a:hover {
+    opacity: 0.6 !important;
+    color: #000000 !important;
+}
+
+/* Hide ALL section titles and headers */
+h1:not(header h1),
+h2, h3, h4, h5, h6,
+.portfolio-title,
+.section-title,
+section > h1,
+section > h2 {
     display: none !important;
 }
 
-/* Portfolio grid - masonry-style with no gaps */
-.gallery {
+/* Hide About and Contact sections */
+.about-section,
+#about,
+.contact-section,
+#contact,
+form {
+    display: none !important;
+}
+
+/* Main Content - Top Margin for Fixed Header */
+main,
+.main-content,
+section:first-of-type {
+    margin-top: 120px !important;
+    padding: 0 !important;
+}
+
+/* Portfolio Grid - Exact PM Masonry */
+.gallery,
+.portfolio-grid,
+.portfolio {
     display: grid !important;
     grid-template-columns: repeat(4, 1fr) !important;
     gap: 0 !important;
-    margin: 0 !important;
     padding: 0 !important;
-    margin-top: 100px !important;
+    margin: 0 !important;
+    width: 100% !important;
+    background-color: #f5f5f5 !important;
 }
 
-/* Gallery items - full bleed */
+/* Gallery Items - No Borders, Full Bleed */
 .gallery-item,
 .portfolio-item {
     position: relative !important;
     overflow: hidden !important;
-    aspect-ratio: 1 / 1 !important;
     margin: 0 !important;
     padding: 0 !important;
     border: none !important;
+    background: none !important;
 }
 
-/* Make some images span 2 columns for variety */
-.gallery-item:nth-child(4n+1) {
+/* Varied Grid Spans for Masonry Effect */
+.gallery-item:nth-child(4n+1),
+.portfolio-item:nth-child(4n+1) {
     grid-column: span 2 !important;
     grid-row: span 2 !important;
 }
 
-/* Images fill container */
+.gallery-item:nth-child(8n+3),
+.portfolio-item:nth-child(8n+3) {
+    grid-column: span 2 !important;
+    grid-row: span 1 !important;
+}
+
+.gallery-item:nth-child(12n+7),
+.portfolio-item:nth-child(12n+7) {
+    grid-column: span 1 !important;
+    grid-row: span 2 !important;
+}
+
+/* Images - Full Container Fill */
 .gallery-item img,
 .portfolio-item img {
     width: 100% !important;
     height: 100% !important;
     object-fit: cover !important;
-    transition: transform 0.3s ease !important;
+    display: block !important;
+    transition: transform 0.4s ease !important;
 }
 
-/* Hover effect */
 .gallery-item:hover img,
 .portfolio-item:hover img {
-    transform: scale(1.05) !important;
+    transform: scale(1.03) !important;
 }
 
-/* Minimal footer */
+/* Footer - PM Style */
 footer {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    padding: 4rem 2rem 2rem !important;
     text-align: center !important;
-    padding: 3rem 0 !important;
+    border-top: none !important;
+}
+
+footer h2,
+footer h3 {
+    display: block !important;
+    font-size: 0.9rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.1em !important;
+    margin-bottom: 1rem !important;
+}
+
+footer input {
+    background-color: transparent !important;
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+    padding: 0.5rem 1rem !important;
+    margin-right: 0.5rem !important;
+}
+
+footer button {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    padding: 0.5rem 1.5rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
 }
 
 footer .social-links {
+    display: flex !important;
     justify-content: center !important;
-    gap: 2rem !important;
+    gap: 1.5rem !important;
+    margin-top: 2rem !important;
 }
 
-/* Hide contact form for minimal design */
-.contact-section form {
-    display: none !important;
+footer .social-links a {
+    color: #ffffff !important;
+    font-size: 1.2rem !important;
 }
 
-/* Portfolio title styling */
-.portfolio h2,
-.gallery h2 {
-    display: none !important;
+footer p {
+    color: #ffffff !important;
+    font-size: 0.7rem !important;
+    margin-top: 2rem !important;
 }
 
-/* Remove section titles except main hero */
-section h2:not(.hero h2) {
-    display: none !important;
+/* Remove all text colors and backgrounds */
+.text-gray-600, .text-gray-700, .text-gray-800, .text-gray-900 {
+    color: #000000 !important;
+}
+
+.bg-white, .bg-gray-100, .bg-gray-200 {
+    background-color: #f5f5f5 !important;
 }
